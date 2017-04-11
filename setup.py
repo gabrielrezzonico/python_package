@@ -9,7 +9,7 @@ setup(name='python_package',
           'License :: OSI Approved :: MIT License',
           'Programming Language :: Python :: 3.5'
       ],
-      url='http://github.com/storborg/funniest',
+      url='https://github.com/gabrielrezzonico/python_package',
       author='Author',
       author_email='package_author@example.com',
       license='MIT',

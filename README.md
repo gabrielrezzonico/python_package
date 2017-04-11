@@ -4,7 +4,6 @@ Minimal python module/package sample project. Only defines a class with dummy fu
 
 ## TODO
 
-* generate documentation using Sphinx
 * create account at pypi.python.org and add .pypirc file
 * git tag and release on github
 * publish the package
