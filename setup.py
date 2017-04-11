@@ -17,7 +17,7 @@ setup(name='python_package',
       # $ pip install -e .[dev,test]
       extras_require={
         'dev': [],
-        'test': ['pytest'],
+        'test': ['pytest', 'pytest-cov'],
       },
       install_requires=[],
       zip_safe=False)

@@ -4,7 +4,6 @@ Minimal python module/package sample project. Only defines a class with dummy fu
 
 ## TODO
 
-* add test coverage
 * generate documentation using Sphinx
 * create account at pypi.python.org and add .pypirc file
 * git tag and release on github
@@ -62,4 +61,38 @@ Type "help", "copyright", "credits" or "license" for more information.
 <class 'python_package.example.Example'>
 >>> ob.hello()
 'Hello!!'
+```
+
+## Test and coverage
+
+To run the test:
+
+```bash
+$ py.test tests
+==================================== test session starts =====================================
+...
+collected 4 items
+
+tests/test_hello.py ...s
+
+============================ 3 passed, 1 skipped in 0.02 seconds =============================
+```
+
+To run the coverage:
+
+```bash
+$ py.test --cov=python_package tests/
+
+ ==================================== test session starts =====================================
+ ...
+tests/test_hello.py ...s
+----------- coverage: platform linux, python 3.5.3-final-0 -----------
+Name                         Stmts   Miss  Cover
+------------------------------------------------
+python_package/__init__.py       1      0   100%
+python_package/example.py        5      0   100%
+------------------------------------------------
+TOTAL                            6      0   100%
+
+============================ 3 passed, 1 skipped in 0.05 seconds =============================
 ```
