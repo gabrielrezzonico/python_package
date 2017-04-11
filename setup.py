@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='python_package',
-      version='0.0.1',
+      version='0.1',
       description='Python package template',
       # see: https://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
