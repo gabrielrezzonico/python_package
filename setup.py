@@ -5,9 +5,9 @@ setup(name='python_package',
       description='Python package template',
       # see: https://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        'Development Status :: 3 - Alpha',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.5'
+          'Development Status :: 3 - Alpha',
+          'License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 3.5'
       ],
       url='http://github.com/storborg/funniest',
       author='Author',
@@ -16,8 +16,8 @@ setup(name='python_package',
       packages=['python_package'],
       # $ pip install -e .[dev,test]
       extras_require={
-        'dev': [],
-        'test': ['pytest', 'pytest-cov'],
+          'dev': [],
+          'test': ['pytest', 'pytest-cov'],
       },
       install_requires=[],
       zip_safe=False)
