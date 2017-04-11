@@ -16,7 +16,7 @@ setup(name='python_package',
       packages=['python_package'],
       # $ pip install -e .[dev,test]
       extras_require={
-          'dev': [],
+          'dev': ['sphinx'],
           'test': ['pytest', 'pytest-cov'],
       },
       install_requires=[],
