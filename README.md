@@ -2,11 +2,20 @@
 
 Minimal python module/package sample project. Only defines a class with dummy functionality and some demo tests. Minimal project structure.
 
+## TODO
+
+* add test coverage
+* generate documentation using Sphinx
+* create account at pypi.python.org and add .pypirc file
+* git tag and release on github
+* publish the package
+
 ## Project structure
 
 | File or folder  | Description  |
 |---|---|
 | setup.py  | Module configuration.  |
+| setup.cfg  | PyPi configuration.  |
 | README.md  | this file.  |
 | python_package/  | The actual package/module. Where all the code resides.  |
 | tests/  | Sample unit test using py.test.  |
