@@ -96,3 +96,18 @@ TOTAL                            6      0   100%
 
 ============================ 3 passed, 1 skipped in 0.05 seconds =============================
 ```
+
+## Generate documention
+
+To generate documentation:
+
+```bash
+cd docs
+make html
+```
+
+The index.html is generated based on docs/index.rst. A simple file of how to autogenerate documentation from the docstring on your code can be found in docs/code.rst, this use autocode. for more infomation you can read:
+
+* [Sphinx](http://www.sphinx-doc.org/en/stable/tutorial.html) 
+
+* [Autodoc](http://www.sphinx-doc.org/en/stable/ext/autodoc.html)
