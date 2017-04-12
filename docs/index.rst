@@ -6,6 +6,11 @@
 Welcome to python_package's documentation!
 ==========================================
 
+Minimal python module/package sample project. 
+Only defines a class with dummy functionality and some demo tests. Minimal project structure.
+The idea is to have a skeleton that can be used to create a package/module easy and to learn how to create one.
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

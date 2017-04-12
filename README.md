@@ -110,3 +110,76 @@ The index.html is generated based on docs/index.rst. A simple file of how to aut
 * [Sphinx](http://www.sphinx-doc.org/en/stable/tutorial.html) 
 
 * [Autodoc](http://www.sphinx-doc.org/en/stable/ext/autodoc.html)
+
+
+# Publish your package on PyPi hosting on github
+
+PyPi is a package index for python, it is what you use when you install a package using pip. If you don't have already, create accounts at 
+[PyPI Live](https://pypi.python.org/pypi?%3Aaction=register_form) and [PyPI Test](https://testpypi.python.org/pypi?%3Aaction=register_form).
+
+## Create a .pypirc configuration file
+
+Create a file called .pypirc with the following configuration from your PyPi accounts:
+
+```bash
+[distutils]
+index-servers =
+  pypi
+  pypitest
+
+[pypi]
+repository=https://pypi.python.org/pypi
+username=your_username
+password=your_password
+
+[pypitest]
+repository=https://testpypi.python.org/pypi
+username=your_username
+password=your_password
+```
+
+I don't use the password field, you can remove it if you don't mind to enter your password whenever you publish a package.
+
+## Checklist for publishing
+
+- [] Update changelog.txt
+- [] Update version number in setup.py
+- [] Update version number in documentation
+- [] Convert README.md to README.rst (using pandoc)
+pandoc --columns=100 --output=README.rst --to rst README.md
+- [] Add tarball download url to setup.py. 
+```python
+setup(
+    ...
+    url = 'https://github.com/gabrielrezzonico/python_package',
+    download_url = 'https://github.com/sheriferson/python_package/tarball/0.1.0',
+    ...
+```
+Even if it doesn't exists yet in github
+- [] Update HISTORY.rst and MANIFEST.in
+A simple way to do it is with this command:
+```bash
+git log --pretty=oneline --abbrev-commit | grep 'feat\|fix' > HISTORY.rst
+```
+Not the best option.
+- [] Commit everything
+- [] Create tag with the version number
+- [] Push to github, use the --tags flags to push the tag too.
+- [] Test the package in PyPi Test:
+```bash
+python setup.py register -r pypitest
+python setup.py sdist upload -r pypitest
+pip install -i https://testpypi.python.org/pypi python_package
+```
+- [] Install the package from PyPi Test:
+```bash
+pip install -i https://testpypi.python.org/pypi python_package
+```
+- [] Publish the package to PyPi Live:
+```bash
+python setup.py sdist upload -r pypi
+```
+- [] Install the package using pip:
+```bash
+pip install python_package
+```
