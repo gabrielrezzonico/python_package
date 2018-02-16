@@ -1,6 +1,6 @@
-# Minimal package/module sample
+# Minimal python package development example
 
-Minimal python module/package sample project. Only defines a class with dummy functionality and some demo tests. Minimal project structure.
+Minimal package development example project. Only defines a class with dummy functionality and some demo tests. Minimal package project structure. Best practices for package development in python.
 
 ## TODO
 

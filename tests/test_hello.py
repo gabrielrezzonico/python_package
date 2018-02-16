@@ -1,6 +1,6 @@
 import pytest
 
-from python_package import Example
+from python_package_example import Example
 
 class TestExample:
     def test_string(self):
