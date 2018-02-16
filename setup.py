@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='python_package',
+setup(name='python_package_quickstart',
       version='0.1',
       description='Minimal python package development example',
       # see: https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -9,11 +9,11 @@ setup(name='python_package',
           'License :: OSI Approved :: MIT License',
           'Programming Language :: Python :: 3.5'
       ],
-      url='https://github.com/gabrielrezzonico/python_package_example',
+      url='https://github.com/gabrielrezzonico/python_package_quickstart',
       author='Author',
       author_email='package_author@example.com',
       license='MIT',
-      packages=['python_package_example'],
+      packages=['python_package_quickstart'],
       # $ pip install -e .[dev,test]
       extras_require={
           'dev': ['sphinx'],

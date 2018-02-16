@@ -1,9 +1,9 @@
-.. python_package documentation master file, created by
+.. python_package_quickstart documentation master file, created by
    sphinx-quickstart on Mon Apr 10 22:09:26 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to python_package's documentation!
+Welcome to python_package_quickstart's documentation!
 ==========================================
 
 Minimal python module/package sample project. 

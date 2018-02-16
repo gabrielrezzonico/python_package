@@ -128,14 +128,14 @@ index-servers =
   pypitest
 
 [pypi]
-repository=https://pypi.python.org/pypi
-username=your_username
-password=your_password
+repository: https://pypi.python.org/pypi
+username: <username>
+password: <password>
 
 [pypitest]
-repository=https://testpypi.python.org/pypi
-username=your_username
-password=your_password
+repository: https://test.pypi.org/legacy/
+username: <username>
+password: <password>
 ```
 
 I don't use the password field, you can remove it if you don't mind to enter your password whenever you publish a package.
@@ -167,13 +167,11 @@ Not the best option.
 - [] Push to github, use the --tags flags to push the tag too.
 - [] Test the package in PyPi Test:
 ```bash
-python setup.py register -r pypitest
-python setup.py sdist upload -r pypitest
-pip install -i https://testpypi.python.org/pypi python_package
+twine upload --repository pypitest dist/*
 ```
 - [] Install the package from PyPi Test:
 ```bash
-pip install -i https://testpypi.python.org/pypi python_package
+pip install -i https://testpypi.python.org/pypi python_package_quickstart
 ```
 - [] Publish the package to PyPi Live:
 ```bash
@@ -181,5 +179,5 @@ python setup.py sdist upload -r pypi
 ```
 - [] Install the package using pip:
 ```bash
-pip install python_package
+pip install python_package_quickstart
 ```

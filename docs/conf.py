@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# python_package documentation build configuration file, created by
+# python_package_quickstart documentation build configuration file, created by
 # sphinx-quickstart on Mon Apr 10 22:09:26 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'python_package'
+project = 'python_package_quickstart'
 copyright = '2017, Gabriel Rezzonico'
 author = 'Gabriel Rezzonico'
 
@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'python_packagedoc'
+htmlhelp_basename = 'python_package_quickstartdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -129,7 +129,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'python_package.tex', 'python\\_package Documentation',
+    (master_doc, 'python_package_quickstart.tex', 'python\\_package Documentation',
      'Gabriel Rezzonico', 'manual'),
 ]
 
@@ -139,7 +139,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'python_package', 'python_package Documentation',
+    (master_doc, 'python_package_quickstart', 'python_package Documentation',
      [author], 1)
 ]
 
@@ -150,8 +150,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'python_package', 'python_package Documentation',
-     author, 'python_package', 'One line description of project.',
+    (master_doc, 'python_package_quickstart', 'python_package Documentation',
+     author, 'python_package_quickstart', 'One line description of project.',
      'Miscellaneous'),
 ]
 
