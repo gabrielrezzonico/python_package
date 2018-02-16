@@ -15,7 +15,7 @@ Minimal package development example project. Only defines a class with dummy fun
 | setup.py  | Module configuration.  |
 | setup.cfg  | PyPi configuration.  |
 | README.md  | this file.  |
-| python_package/  | The actual package/module. Where all the code resides.  |
+| python_package_quickstart/  | The actual package/module. Where all the code resides.  |
 | tests/  | Sample unit test using py.test.  |
 
 
@@ -80,7 +80,7 @@ tests/test_hello.py ...s
 To run the coverage:
 
 ```bash
-$ py.test --cov=python_package tests/
+$ py.test --cov=python_package_quickstart tests/
 
  ==================================== test session starts =====================================
  ...
@@ -88,8 +88,8 @@ tests/test_hello.py ...s
 ----------- coverage: platform linux, python 3.5.3-final-0 -----------
 Name                         Stmts   Miss  Cover
 ------------------------------------------------
-python_package/__init__.py       1      0   100%
-python_package/example.py        5      0   100%
+python_package_quickstart/__init__.py       1      0   100%
+python_package_quickstart/example.py        5      0   100%
 ------------------------------------------------
 TOTAL                            6      0   100%
 
@@ -165,6 +165,10 @@ Not the best option.
 - [] Commit everything
 - [] Create tag with the version number
 - [] Push to github, use the --tags flags to push the tag too.
+- [] Create a source distribution
+```bash
+python setup.py sdist bdist_wheel
+```
 - [] Test the package in PyPi Test:
 ```bash
 twine upload --repository pypitest dist/*
@@ -175,7 +179,7 @@ pip install -i https://testpypi.python.org/pypi python_package_quickstart
 ```
 - [] Publish the package to PyPi Live:
 ```bash
-python setup.py sdist upload -r pypi
+twine upload dist/*
 ```
 - [] Install the package using pip:
 ```bash
